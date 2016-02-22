@@ -1,0 +1,15 @@
+{
+  "name": "micro-ts-example",
+  "version": "1.0.0",
+  "description": "Trying out microservices",
+  "main": "index.js",
+  "scripts": {
+	"start": "micro -p 3000 --no-babel index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "styfle",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "^1.0.4"
+  }
+}
