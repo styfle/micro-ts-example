@@ -4,12 +4,18 @@
   "description": "Trying out microservices",
   "main": "index.js",
   "scripts": {
-	"start": "micro -p 3000 --no-babel index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "micro -p 3000 --no-babel index.js",
+    "build": "tsc",
+    "watch": "tsc --watch"
   },
   "author": "styfle",
   "license": "MIT",
   "dependencies": {
-    "micro": "^1.0.4"
+    "micro": "^1.0.4",
+    "then-sleep": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.9",
+    "typings": "^0.7.12"
   }
 }
