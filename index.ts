@@ -1,7 +1,11 @@
 "use strict";
-import {send} from 'micro';
-import {sleep} from 'then-sleep';
-export default async function (req: any, res: any) {
-    await sleep(500);
-    send(res, 200, 'Ready!');
+import * as micro from 'micro';
+//import * as sleep from 'then-sleep';
+import {IncomingMessage, ServerResponse} from 'http';
+
+async function requestHandler(req: IncomingMessage, res: ServerResponse) {
+    res.writeHead(200);
+    res.end('woot');
 }
+
+micro(requestHandler).listen(process.env.PORT || 3000);
