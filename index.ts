@@ -1,5 +1,5 @@
 "use strict";
-const micro = require('micro');
+import * as micro from 'micro';
 //import * as sleep from 'then-sleep';
 import {IncomingMessage, ServerResponse} from 'http';
 
@@ -8,4 +8,4 @@ async function requestHandler(req: IncomingMessage, res: ServerResponse) {
     res.end('wootdawg');
 }
 
-micro.default(requestHandler).listen(process.env.PORT || 3000);
+micro(requestHandler).listen(process.env.PORT || 3000);
