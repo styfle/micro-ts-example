@@ -11,8 +11,8 @@ const micro = require('micro');
 function requestHandler(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         res.writeHead(200);
-        res.end('woot');
+        res.end('wootdawg');
     });
 }
-micro(requestHandler).listen(process.env.PORT || 3000);
+micro.default(requestHandler).listen(process.env.PORT || 3000);
 //# sourceMappingURL=index.js.map

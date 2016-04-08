@@ -4,7 +4,7 @@
   "description": "Trying out microservices",
   "main": "index.js",
   "scripts": {
-    "start": "micro -p 3000 --no-babel index.js",
+    "start": "node index.js",
     "build": "tsc",
     "watch": "tsc --watch"
   },
